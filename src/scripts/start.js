@@ -18,10 +18,15 @@ function navAboutFunction() {
   var homeDiv = document.getElementById("home");
   homeDiv.classList.add("w3-hide");
 
+  var homeBar = document.getElementById("homeBar");
+  homeBar.classList.remove("w3-white");
+  homeBar.classList.add("w3-hover-white");
+  homeBar.classList.add("w3-hide-small");
+
   var aboutBar = document.getElementById("aboutBar");
-  aboutBar.classList.remove("w3-white");
-  aboutBar.classList.add("w3-hover-white");
-  aboutBar.classList.add("w3-hide-small");
+  aboutBar.classList.add("w3-white");
+  aboutBar.classList.remove("w3-hide-small");
+  aboutBar.classList.remove("w3-hover-white");
 }
 
 function navHomeFunction() {
@@ -33,4 +38,14 @@ function navHomeFunction() {
 
   var aboutHeader = document.getElementById("aboutHeader");
   aboutHeader.classList.add("w3-hide");
+
+  var aboutBar = document.getElementById("aboutBar");
+  aboutBar.classList.remove("w3-white");
+  aboutBar.classList.add("w3-hover-white");
+  aboutBar.classList.add("w3-hide-small");
+
+  var homeBar = document.getElementById("homeBar");
+  homeBar.classList.add("w3-white");
+  homeBar.classList.remove("w3-hide-small");
+  homeBar.classList.remove("w3-hover-white");
 }
