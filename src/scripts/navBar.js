@@ -15,48 +15,18 @@ function navFunction(currentBar, currentDiv) {
 
 function modifyNavBars(currentBar) {
   console.log("Entered into modifyNavBar");
+  $(navBar)
+    .children()
+    .removeClass();
 
-  if (currentBar !== "aboutBar") {
-    $("#aboutBar").removeClass();
-    $("#aboutBar").addClass(
+  $(navBar)
+    .children()
+    .addClass(
       "w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
     );
-  } else {
-    $(aboutBar).removeClass();
-    $(aboutBar).addClass("w3-bar-item w3-button w3-padding-large w3-white");
-  }
 
-  if (currentBar !== "homeBar") {
-    $(homeBar).removeClass();
-    $(homeBar).addClass(
-      "w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-    );
-  } else {
-    $(homeBar).removeClass();
-    $(homeBar).addClass("w3-bar-item w3-button w3-padding-large w3-white");
-  }
-
-  if (currentBar !== "upcomingBar") {
-    $(upcomingBar).removeClass();
-    $(upcomingBar).addClass(
-      "w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-    );
-  } else {
-    $(upcomingBar).removeClass();
-    $(upcomingBar).addClass("w3-bar-item w3-button w3-padding-large w3-white");
-  }
-
-  if (currentBar !== "referencesBar") {
-    $(referencesBar).removeClass();
-    $(referencesBar).addClass(
-      "w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-    );
-  } else {
-    $(referencesBar).removeClass();
-    $(referencesBar).addClass(
-      "w3-bar-item w3-button w3-padding-large w3-white"
-    );
-  }
+  $(currentBar).removeClass();
+  $(currentBar).addClass("w3-bar-item w3-button w3-padding-large w3-white");
 }
 
 function modifyNavDivs(currentDiv) {
