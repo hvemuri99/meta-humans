@@ -37,8 +37,13 @@
   <!-- Home -->
   <div id="home" class="w3-container w3-red w3-center" style="padding:128px 16px">
     <h1 class="w3-margin w3-jumbo">App Metas</h1>
-    <p class="w3-xlarge">Search Meta-Humans on Earth1</p>
-    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Search Metas</button>
+    <p class="w3-xlarge">Search Meta-Humans by their super strength on Earth1.</p>
+    <div>
+      <form autocomplete="off">
+        <input type="text" placeholder="Search Metas..." name="Search">
+      </form>
+    </div>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" onclick=searchMetas()>Search Metas</button>
   </div>
 
   <!-- About -->
@@ -60,12 +65,12 @@
   </div>
 
   <!-- Block1 -->
-  <div class="w3-row-padding w3-padding-64 w3-container">
+  <div id="block1" class="w3-row-padding w3-padding-64 w3-container">
     <div class="w3-content">
       <div class="w3-twothird">
-        <h1>History</h1>
+        <h1 id="block1Header">History</h1>
 
-        <p class="w3-text-grey">The earliest meta-humans date back to the times of Ancient India, with Savitar being the first speedster, and the
+        <p id="block1Body" class="w3-text-grey">The earliest meta-humans date back to the times of Ancient India, with Savitar being the first speedster, and the
           mightiest of them all in the multiverse. It's unknown whether there are Savitars of alternate universes.To prepare
           worlds for his arrival, Savitar would interact with the humans through his avatar as Alchemy, possessing them to
           do his being and create cults in his name. Savitar's source of powers was the Brahmastra, commonly known as the
@@ -78,13 +83,13 @@
   </div>
 
   <!-- Block2-->
-  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div id="block2" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
     <div class="w3-content">
       <div class="w3-twothird">
-        <h1>Dr.Harison Wells</h1>
-        <h5 class="w3-padding-32">Who is Dr.Wells?</h5>
+        <h1 id="block2Header1">Dr.Harison Wells</h1>
+        <h5 id="block2Header2" class="w3-padding-32">Who is Dr.Wells?</h5>
 
-        <p class="w3-text-grey">Dr.Wells also known as Harison Wells is a famous scientist and founder of STAR labs. He is known for his estonishing
+        <p id="block2Body" class="w3-text-grey">Dr.Wells also known as Harison Wells is a famous scientist and founder of STAR labs. He is known for his estonishing
           work in field of science.</p>
       </div>
     </div>

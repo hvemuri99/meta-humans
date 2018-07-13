@@ -14,7 +14,6 @@ function navFunction(currentBar, currentDiv) {
 }
 
 function modifyNavBars(currentBar) {
-  console.log("Entered into modifyNavBar");
   $(navBar)
     .children()
     .removeClass();
@@ -30,7 +29,6 @@ function modifyNavBars(currentBar) {
 }
 
 function modifyNavDivs(currentDiv) {
-  console.log("Entered into modifyNavDiv");
   $(about).removeClass("w3-hide");
   $(home).removeClass("w3-hide");
 
@@ -40,4 +38,23 @@ function modifyNavDivs(currentDiv) {
   if (currentDiv !== "about") {
     $(about).addClass("w3-hide");
   }
+}
+
+function searchMetas() {
+  var http = new XMLHttpRequest();
+  var request = {
+    superStrength: "superspeed",
+    timestamp: ""
+  };
+  http.open("post", "http://localhost:8080/metas/fetch/v1", false);
+  http.setRequestHeader("Content-Type", "application/json");
+  http.setRequestHeader("Authorization","Basic ZHJmaXJzdDpEcmZpcnN0MTIzNA==")
+  http.send(request);
+  http.onreadystatechange = function() {
+    if (this.readyState == 4 && http.status == 200) {
+      $(block1).remove();
+      $(block2).remove();
+    }
+    console.log(http.responseText);
+  };
 }
